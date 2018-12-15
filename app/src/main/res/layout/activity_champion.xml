@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChampionActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:id="@+id/moving"
+            android:layout_width="2275dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/transp"
+        android:layout_width="285dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="216dp"
+        android:alpha=".3"
+        android:background="@android:color/background_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/champ_name"
+        android:layout_width="267dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="224dp"
+        android:text="NAME"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:fontFamily="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/champ_title"
+        android:layout_width="229dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="40dp"
+        android:text="TITLE"
+        android:textColor="@android:color/background_light"
+        android:textSize="23sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/champ_name" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="335dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="386dp"
+                android:layout_height="443dp"
+                android:layout_marginBottom="452dp"
+                android:alpha=".5"
+                android:background="@android:color/background_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/champ_bio"
+                android:layout_width="299dp"
+                android:layout_height="449dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="READ ME"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:typeface="serif"
+                app:fontFamily="sans-serif-condensed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/vid"
+                android:layout_width="324dp"
+                android:layout_height="203dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="88dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/champ_bio" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
