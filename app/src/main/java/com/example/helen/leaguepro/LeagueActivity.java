@@ -63,15 +63,6 @@ public class LeagueActivity extends AppCompatActivity{
 
     }
 
-    @Override
-    public void onBackPressed(){
-
-        super.onBackPressed();          //  Performs the normal Back function but restarts the TitleActivity
-        Intent intent = new Intent(LeagueActivity.this, TitleActivity.class);
-        startActivity(intent);
-    }
-
-
 
 
     public static Champion[] champions = {
